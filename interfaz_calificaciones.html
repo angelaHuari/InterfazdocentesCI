@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calificaciones - Dashboard Docentes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Panel Docente</h2>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="interfaz_grupos.html">Grupos</a>
+        <a href="interfaz_asistencias.html">Asistencias</a>
+        <a href="interfaz_calificaciones.html" class="active">Calificaciones</a>
+        <a href="interfaz_reportes.html">Reportes</a>
+        <a href="interfaz_perfil.html">Perfil</a>
+        <a href="interfaz_configuracion.html">Configuración</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>Calificaciones</h1>
+        <img src="img/icono.jpg" alt="Icono" class="w-10 h-10 rounded-full">
+      </header>
+
+      <main class="mt-6">
+        <section class="table-container">
+          <form onsubmit="event.preventDefault(); agregarCalificacion(parseInt(document.getElementById('estudiante').value), parseInt(document.getElementById('grupoC').value), parseFloat(document.getElementById('nota').value));">
+            <select id="estudiante">
+              <option value="1">Juan Pérez</option>
+              <option value="2">María López</option>
+            </select>
+            <select id="grupoC">
+              <option value="1">Grupo A</option>
+              <option value="2">Grupo B</option>
+            </select>
+            <input type="number" id="nota" min="0" max="20" required>
+            <button type="submit">Agregar Nota</button>
+          </form>
+          <table>
+            <thead>
+              <tr>
+                <th>Estudiante</th>
+                <th>Grupo</th>
+                <th>Nota</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-calificaciones"></tbody>
+              <!-- Agrega más filas según sea necesario -->
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      mostrarCalificaciones();
+    });
+  </script>
+</body>
+</html>
