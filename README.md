@@ -3,7 +3,7 @@
 Este proyecto es un prototipo estático de un panel de control para docentes, inspirado en el diseño de TailAdmin. Utiliza HTML5 y CSS3, con estilos basados en Tailwind CSS.
 
 ## Estructura del Proyecto
-
+```bash
 /interfaces/
 ├── index.html
 ├── interfaz_grupos.html 
@@ -17,6 +17,7 @@ Este proyecto es un prototipo estático de un panel de control para docentes, in
 ├── img/
 │   └── icono.jpg
 └── README.md
+```
 
 ## Vistas Incluidas
 
