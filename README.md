@@ -14,7 +14,7 @@ Este proyecto es un prototipo estático de un panel de control para docentes, in
 ├── interfaz_configuracion.html
 ├── css/
 │   └── styles.css
-├── img/
+├── images/
 │   └── icono.jpg
 └── README.md
 ```

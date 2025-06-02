@@ -110,13 +110,18 @@ tbody tr:hover {
   background-color: #f9fafb;
 }
 
-/* Responsive Image */
+/* Responsive Image 
 img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
+}*/
+.logo-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-
 /* Buttons */
 .button {
   display: inline-block;
